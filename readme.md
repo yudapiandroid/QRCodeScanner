@@ -1,0 +1,2 @@
+- 界面是项目中使用到的界面
+- 使用的的库是[https://github.com/bingoogolapple/BGAQRCode-Android]
