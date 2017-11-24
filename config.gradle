@@ -32,4 +32,8 @@ ext{
         dependencies.v7
     ]
 
+    scannercreaterLibs = [
+            dependencies.v7
+    ]
+
 }
