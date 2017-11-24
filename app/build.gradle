@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 def config = rootProject.ext.android
 
@@ -9,7 +9,6 @@ android {
 
     defaultConfig {
 
-        applicationId "com.dapi.suse.qrcodescanner"
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
         versionCode 1
