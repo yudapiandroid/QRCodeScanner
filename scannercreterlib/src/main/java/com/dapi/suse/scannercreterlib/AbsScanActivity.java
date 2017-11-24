@@ -105,7 +105,7 @@ public abstract class AbsScanActivity extends Activity {
      */
     public void toggleFlash(){
         try {
-            if(flashIsOpen){
+            if(!flashIsOpen){
                 zBarView.openFlashlight();
                 flashIsOpen = true;
             }else{
