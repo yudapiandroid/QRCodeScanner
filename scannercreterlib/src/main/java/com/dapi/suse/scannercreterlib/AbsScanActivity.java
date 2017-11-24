@@ -2,7 +2,6 @@ package com.dapi.suse.scannercreterlib;
 
 import android.app.Activity;
 import android.os.Vibrator;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -18,7 +17,7 @@ public abstract class AbsScanActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.abs_activity_layout);
         zBarView = (ZBarView) findViewById(R.id.zbv_content);
         zBarView.setDelegate(new QRCodeView.Delegate() {
             @Override
