@@ -40,7 +40,7 @@ android {
 
 dependencies {
 //    api project(':qrcodecore')
-    compile project(':qrcodecore')
+    compile 'cn.bingoogolapple:bga-qrcode-core:1.2.0'
 }
 
 // gradle clean build bintrayUpload
