@@ -16,7 +16,6 @@ import android.text.StaticLayout;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 
 public class ScanBoxView extends View {
@@ -196,9 +195,6 @@ public class ScanBoxView extends View {
         } else if (attr == R.styleable.QRCodeView_qrcv_isOnlyDecodeScanBoxArea) {
             mIsOnlyDecodeScanBoxArea = typedArray.getBoolean(attr, mIsOnlyDecodeScanBoxArea);
         }
-
-        // FIXME: 2017/11/24 直接固定在控件中间
-        mToolbarHeight = getContext().getResources().getDisplayMetrics().heightPixels / 2 - mBarcodeRectHeight - 30;
     }
 
     private void afterInitCustomAttrs() {

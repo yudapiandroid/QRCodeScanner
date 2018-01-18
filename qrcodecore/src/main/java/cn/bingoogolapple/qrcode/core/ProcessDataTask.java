@@ -3,7 +3,6 @@ package cn.bingoogolapple.qrcode.core;
 import android.hardware.Camera;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.util.Log;
 
 public class ProcessDataTask extends AsyncTask<Void, Void, String> {
     private Camera mCamera;
@@ -50,7 +49,6 @@ public class ProcessDataTask extends AsyncTask<Void, Void, String> {
 
         if (orientation == BGAQRCodeUtil.ORIENTATION_PORTRAIT) {
             data = new byte[mData.length];
-            Log.i("TEST","获取到的图片宽度和高度 : " + height + "   "+width);
             for (int y = 0; y < height; y++) {
                 for (int x = 0; x < width; x++) {
                     data[x * height + height - y - 1] = mData[x + y * width];
