@@ -17,7 +17,7 @@ android {
 
 
     def isBuildSo = true
-    if (false) { // 构建生成 so 文件
+    if (isBuildSo) { // 构建生成 so 文件
         sourceSets {
             main {
                 jniLibs.srcDirs = []
