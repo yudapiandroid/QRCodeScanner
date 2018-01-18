@@ -48,12 +48,11 @@ public class ProcessDataTask extends AsyncTask<Void, Void, String> {
 
         byte[] data = mData;
 
-        if (orientation == BGAQRCodeUtil.ORIENTATION_PORTRAIT) {
+        if (orientation == BGAQRCodeUtil.ORIENTATION_PORTRAIT && false) {
             data = new byte[mData.length];
             for (int y = 0; y < height; y++) {
                 for (int x = 0; x < width; x++) {
                     data[x * height + height - y - 1] = mData[x + y * width];
-                    Log.i("TEST","orientation == BGAQRCodeUtil.ORIENTATION_PORTRAITorientation == BGAQRCodeUtil.ORIENTATION_PORTRAITorientation == BGAQRCodeUtil.ORIENTATION_PORTRAITorientation == BGAQRCodeUtil.ORIENTATION_PORTRAIT");
                 }
             }
             int tmp = width;
