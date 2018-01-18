@@ -195,6 +195,9 @@ public class ScanBoxView extends View {
         } else if (attr == R.styleable.QRCodeView_qrcv_isOnlyDecodeScanBoxArea) {
             mIsOnlyDecodeScanBoxArea = typedArray.getBoolean(attr, mIsOnlyDecodeScanBoxArea);
         }
+
+        // FIXME: 2017/11/24 直接固定在控件中间
+        mToolbarHeight = getContext().getResources().getDisplayMetrics().heightPixels / 2 - mBarcodeRectHeight - 30;
     }
 
     private void afterInitCustomAttrs() {
