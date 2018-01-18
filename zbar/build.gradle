@@ -16,7 +16,7 @@ android {
 
 
 
-    def isBuildSo = true
+    def isBuildSo = false
     if (isBuildSo) { // 构建生成 so 文件
         sourceSets {
             main {
