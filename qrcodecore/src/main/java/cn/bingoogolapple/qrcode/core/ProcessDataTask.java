@@ -48,7 +48,7 @@ public class ProcessDataTask extends AsyncTask<Void, Void, String> {
 
         byte[] data = mData;
 
-        if (orientation == BGAQRCodeUtil.ORIENTATION_PORTRAIT && false) {
+        if (orientation == BGAQRCodeUtil.ORIENTATION_PORTRAIT) {
             data = new byte[mData.length];
             for (int y = 0; y < height; y++) {
                 for (int x = 0; x < width; x++) {
