@@ -1,5 +1,29 @@
 [
     {
+        "outputFile": "C:\\Users\\Administrator\\Desktop\\BGAQRCode-Android-1.2.0\\qrcodecore\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 1942,
+                    "endColumn": 53,
+                    "endOffset": 1991
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\BGAQRCode-Android-1.2.0\\qrcodecore\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 1942,
+                        "endColumn": 53,
+                        "endOffset": 1991
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "F:\\android\\QRCodeScanner\\qrcodecore\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
         "map": [
             {

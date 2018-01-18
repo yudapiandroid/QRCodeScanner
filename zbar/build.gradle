@@ -3,17 +3,45 @@ apply plugin: 'com.android.library'
 def config = rootProject.ext.android
 
 android {
+
     compileSdkVersion config.compileSdkVersion
     buildToolsVersion config.buildToolsVersion
+
 
     defaultConfig {
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
         consumerProguardFiles 'consumer-proguard-rules.pro'
     }
+
+
+
+    def isBuildSo = false
+    if (isBuildSo) { // 构建生成 so 文件
+        sourceSets {
+            main {
+                jniLibs.srcDirs = []
+            }
+        }
+        externalNativeBuild {
+            ndkBuild {
+                path 'src/main/jni/Android.mk'
+            }
+        }
+    } else { // 生成 so 文件后，打包时直接使用生成的 so
+        sourceSets {
+            main {
+                jni.srcDirs = []
+            }
+        }
+        delete(file('.externalNativeBuild'), file('src/main/libs'), file('src/main/obj'))
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    api project(':qrcodecore')
     compile project(':qrcodecore')
 }
+
+// gradle clean build bintrayUpload
+//apply from: 'https://raw.githubusercontent.com/bingoogolapple/PublishAar/master/jcenter-release.gradle'

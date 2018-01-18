@@ -1,1 +1,1 @@
-include ':app', ':qrcodecore', ':zbar', ':scannercreterlib'
+include ':app', ':scannercreterlib', ':qrcodecore', ':zbar'
