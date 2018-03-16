@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/qrcodecore" />
             <option value="$PROJECT_DIR$/scannercreterlib" />
             <option value="$PROJECT_DIR$/zbar" />
+            <option value="$PROJECT_DIR$/zxing" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

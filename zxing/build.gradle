@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+def config = rootProject.ext.android
+
+android {
+
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+    }
+}
+
+dependencies {
+    provided 'com.google.zxing:core:3.3.1'
+    provided project(':qrcodecore')
+}

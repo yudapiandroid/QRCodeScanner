@@ -1,24 +1,26 @@
 package com.dapi.suse.scannercreterlib;
 
 import android.app.Activity;
-import android.os.Vibrator;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.FrameLayout;
 
 import cn.bingoogolapple.qrcode.core.QRCodeView;
-import cn.bingoogolapple.qrcode.zbar.ZBarView;
 
 public abstract class AbsScanActivity extends Activity {
 
-    ZBarView zBarView;
+    QRCodeView zBarView;
     FrameLayout contentFrameLayout;// 展示其他布局的时候使用
+
+    protected boolean useZxing = false; // 是否使用zxing
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.abs_activity_layout);
-        zBarView = (ZBarView) findViewById(R.id.zbv_content);
+        beforeAttachContentView();
+        setContentView(useZxing ? R.layout.abs_activity_layout_zxing : R.layout.abs_activity_layout);
+        zBarView = (QRCodeView) findViewById(R.id.zbv_content);
         zBarView.setDelegate(new QRCodeView.Delegate() {
             @Override
             public void onScanQRCodeSuccess(String result) {
@@ -41,6 +43,15 @@ public abstract class AbsScanActivity extends Activity {
             contentFrameLayout.addView(contentView);
         }
     } //end m
+
+    /**
+     *
+     * 调用setContentView之前调用
+     *
+     */
+    public void beforeAttachContentView() {
+
+    }
 
     @Override
     protected void onStart() {

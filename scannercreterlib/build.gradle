@@ -24,4 +24,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile rootProject.ext.scannercreaterLibs
     compile project(":zbar")
+    compile project(":zxing")
 }
