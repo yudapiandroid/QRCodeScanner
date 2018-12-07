@@ -3,7 +3,7 @@
     package="cn.bingoogolapple.qrcode.zxing" >
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="28" />
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
 
 </manifest>

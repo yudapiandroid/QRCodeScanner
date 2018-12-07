@@ -1,25 +1,25 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml:1:1-52
-INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml:1:1-52
-INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml:1:1-52
+ADDED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml:1:1-52
+INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml:1:1-52
+INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml:1:1-52
 	package
-		ADDED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml:1:11-50
-		INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml
-		INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml
+		ADDED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml:1:11-50
+		INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml
+		INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml:1:1-52
+		ADDED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml:1:1-52
 uses-sdk
-INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml
-INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml
-INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml
-INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml
+INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml
+INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml
+INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml
+INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml
-		ADDED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml
-		INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml
+		INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml
+		ADDED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml
+		INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml
-		ADDED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml
-		INJECTED from D:\project\BGAQRCode-Android-master\zbar\src\main\AndroidManifest.xml
+		INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml
+		ADDED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml
+		INJECTED from D:\project\QRCodeScanner\zbar\src\main\AndroidManifest.xml

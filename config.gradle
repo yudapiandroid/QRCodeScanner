@@ -1,14 +1,14 @@
 
-def V7_VERSION = '25.0.0'
-def V4_VERSION = '25.0.0'
+def V7_VERSION = '28.0.0'
+def V4_VERSION = '28.0.0'
 
 
 ext{
 
     android = [
 
-            compileSdkVersion : 25,
-            buildToolsVersion : "25.0.0",
+            compileSdkVersion : 28,
+            buildToolsVersion : "28.0.0",
             minSdkVersion     : 16,
             targetSdkVersion  : 23
     ]
