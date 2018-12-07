@@ -80,7 +80,8 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 
                         mCameraConfigurationManager.setDesiredCameraParameters(mCamera);
                         mCamera.startPreview();
-                        startContinuousAutoFocus();
+                        // startContinuousAutoFocus();
+                        mCamera.autoFocus(autoFocusCB);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -92,6 +93,8 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     void stopCameraPreview() {
         if (mCamera != null) {
             try {
+                removeCallbacks(doAutoFocus);
+
                 mPreviewing = false;
                 mCamera.cancelAutoFocus();
                 mCamera.setOneShotPreviewCallback(null);
@@ -142,7 +145,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         BGAQRCodeUtil.printRect("转换后", scanRect);
 
         BGAQRCodeUtil.d("扫码框发生变化触发对焦测光");
-        handleFocusMetering(scanRect.centerX(), scanRect.centerY(), scanRect.width(), scanRect.height());
+        // handleFocusMetering(scanRect.centerX(), scanRect.centerY(), scanRect.width(), scanRect.height());
     }
 
     @Override
@@ -165,7 +168,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
                 centerY = temp;
             }
             int focusSize = BGAQRCodeUtil.dp2px(getContext(), 120);
-            handleFocusMetering(centerX, centerY, focusSize, focusSize);
+            // handleFocusMetering(centerX, centerY, focusSize, focusSize);
         }
 
         if (event.getPointerCount() == 2) {
@@ -187,26 +190,29 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     }
 
     private static void handleZoom(boolean isZoomIn, Camera camera) {
-        Camera.Parameters params = camera.getParameters();
-        if (params.isZoomSupported()) {
-            int zoom = params.getZoom();
-            if (isZoomIn && zoom < params.getMaxZoom()) {
-                BGAQRCodeUtil.d("放大");
-                zoom++;
-            } else if (!isZoomIn && zoom > 0) {
-                BGAQRCodeUtil.d("缩小");
-                zoom--;
+        try {
+            Camera.Parameters params = camera.getParameters();
+            if (params.isZoomSupported()) {
+                int zoom = params.getZoom();
+                if (isZoomIn && zoom < params.getMaxZoom()) {
+                    BGAQRCodeUtil.d("放大");
+                    zoom += 2;
+                } else if (!isZoomIn && zoom > 0) {
+                    BGAQRCodeUtil.d("缩小");
+                    zoom -= 2;
+                } else {
+                    BGAQRCodeUtil.d("既不放大也不缩小");
+                }
+                zoom = zoom > params.getMaxZoom() ? params.getMaxZoom() : zoom;
+                params.setZoom(zoom);
+                camera.setParameters(params);
             } else {
-                BGAQRCodeUtil.d("既不放大也不缩小");
+                BGAQRCodeUtil.d("不支持缩放");
             }
-            params.setZoom(zoom);
-            camera.setParameters(params);
-        } else {
-            BGAQRCodeUtil.d("不支持缩放");
-        }
+        }catch (Exception e){}
     }
 
-    private void handleFocusMetering(float originFocusCenterX, float originFocusCenterY,
+    private void handleFocusMetering_(float originFocusCenterX, float originFocusCenterY,
             int originFocusWidth, int originFocusHeight) {
         try {
             boolean isNeedUpdate = false;
@@ -249,7 +255,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
                         } else {
                             BGAQRCodeUtil.e("对焦测光失败");
                         }
-                        startContinuousAutoFocus();
+                        //startContinuousAutoFocus();
                     }
                 });
             } else {
@@ -258,14 +264,14 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         } catch (Exception e) {
             e.printStackTrace();
             BGAQRCodeUtil.e("对焦测光失败：" + e.getMessage());
-            startContinuousAutoFocus();
+            //startContinuousAutoFocus();
         }
     }
 
     /**
      * 连续对焦
      */
-    private void startContinuousAutoFocus() {
+    private void startContinuousAutoFocus_() {
         mIsTouchFocusing = false;
         if (mCamera == null) {
             return;
@@ -305,4 +311,33 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         }
         super.onMeasure(MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY), MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY));
     }
+
+    /**
+     *
+     * 自动对焦功能改造
+     *
+     */
+
+    private Runnable doAutoFocus = new Runnable() {
+        public void run() {
+            if (mCamera != null && mPreviewing && mSurfaceCreated) {
+                try {
+                    mCamera.autoFocus(autoFocusCB);
+                } catch (Exception e) {
+                }
+            }
+        }
+    };
+
+
+    Camera.AutoFocusCallback autoFocusCB = new Camera.AutoFocusCallback() {
+        public void onAutoFocus(boolean success, Camera camera) {
+            if (success) {
+                postDelayed(doAutoFocus, 500);
+            } else {
+                postDelayed(doAutoFocus, 100);
+            }
+        }
+    };
+
 }

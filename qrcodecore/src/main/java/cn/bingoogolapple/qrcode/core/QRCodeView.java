@@ -23,7 +23,7 @@ public abstract class QRCodeView extends RelativeLayout implements Camera.Previe
      */
     private static final int SPOT_MIN_DELAY = 100;
     private static final int NO_CAMERA_ID = -1;
-    public Camera mCamera;
+    protected Camera mCamera;
     protected CameraPreview mCameraPreview;
     protected ScanBoxView mScanBoxView;
     protected Delegate mDelegate;

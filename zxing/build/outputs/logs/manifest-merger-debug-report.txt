@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml:1:1-53
+INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml:1:1-53
+INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml:1:1-53
+	package
+		ADDED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml:1:11-51
+		INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml
+		INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml:1:1-53
+uses-sdk
+INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml
+INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml
+INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml
+INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml
+		ADDED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml
+		INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml
+		ADDED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml
+		INJECTED from D:\project\BGAQRCode-Android-master\zxing\src\main\AndroidManifest.xml

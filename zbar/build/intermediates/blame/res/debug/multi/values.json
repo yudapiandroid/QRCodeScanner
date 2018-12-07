@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "D:\\project\\QRCodeScanner\\zbar\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 2179,
+                    "endColumn": 53,
+                    "endOffset": 2228
+                },
+                "from": {
+                    "file": "D:\\project\\QRCodeScanner\\qrcodecore\\build\\intermediates\\bundles\\default\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 2179,
+                        "endColumn": 53,
+                        "endOffset": 2228
+                    }
+                }
+            }
+        ]
+    }
+]

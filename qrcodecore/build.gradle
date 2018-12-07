@@ -11,6 +11,3 @@ android {
         targetSdkVersion config.targetSdkVersion
     }
 }
-
-// gradle clean build bintrayUpload
-//apply from: 'https://raw.githubusercontent.com/bingoogolapple/PublishAar/master/jcenter-release.gradle'

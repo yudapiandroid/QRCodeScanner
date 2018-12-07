@@ -263,7 +263,7 @@ public class ScanBoxView extends View {
         drawScanLine(canvas);
 
         // 画提示文本
-        drawTipText(canvas);
+        // drawTipText(canvas);
 
         // 移动扫描线的位置
         moveScanLine();

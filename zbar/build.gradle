@@ -3,29 +3,16 @@ apply plugin: 'com.android.library'
 def config = rootProject.ext.android
 
 android {
-
     compileSdkVersion config.compileSdkVersion
     buildToolsVersion config.buildToolsVersion
-
-    packagingOptions{
-        doNotStrip '*/mips/*.so'
-        doNotStrip '*/mips64/*.so'
-    }     
 
     defaultConfig {
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
-        consumerProguardFiles 'consumer-proguard-rules.pro'
-        
-        ndk {
-            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86' // <- only the supported ones
-        }
-     
     }
 
-    
 
-    /*def isBuildSo = true
+    def isBuildSo = false
     if (isBuildSo) { // 构建生成 so 文件
         sourceSets {
             main {
@@ -44,19 +31,9 @@ android {
             }
         }
         delete(file('.externalNativeBuild'), file('src/main/libs'), file('src/main/obj'))
-    }*/
-
-    sourceSets {
-        main {
-            jni.srcDirs = []
-        }
     }
 }
 
 dependencies {
-//    api project(':qrcodecore')
     compile project(':qrcodecore')
 }
-
-// gradle clean build bintrayUpload
-//apply from: 'https://raw.githubusercontent.com/bingoogolapple/PublishAar/master/jcenter-release.gradle'
