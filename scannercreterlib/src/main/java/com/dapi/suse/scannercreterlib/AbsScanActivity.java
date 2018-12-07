@@ -10,8 +10,8 @@ import cn.bingoogolapple.qrcode.core.QRCodeView;
 
 public abstract class AbsScanActivity extends Activity {
 
-    QRCodeView zBarView;
-    FrameLayout contentFrameLayout;// 展示其他布局的时候使用
+    protected QRCodeView zBarView;
+    protected FrameLayout contentFrameLayout;// 展示其他布局的时候使用
 
     protected boolean useZxing = false; // 是否使用zxing
 
@@ -29,6 +29,11 @@ public abstract class AbsScanActivity extends Activity {
                     Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
                     vibrator.vibrate(200);
                 }catch (Exception e){}
+            }
+
+            @Override
+            public void onCameraAmbientBrightnessChanged(boolean isDark) {
+                onCameraAmbientBrightnessChang(isDark);
             }
 
             @Override
@@ -142,6 +147,8 @@ public abstract class AbsScanActivity extends Activity {
      */
     public abstract void onSuccess(String message);
 
+
+    public abstract void onCameraAmbientBrightnessChang(boolean isDark);
 
     public View createContentView(){
         return null;

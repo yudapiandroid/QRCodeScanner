@@ -20,6 +20,11 @@ public class TestActivity extends AbsScanActivity{
     }
 
     @Override
+    public void onCameraAmbientBrightnessChang(boolean isDark) {
+
+    }
+
+    @Override
     protected void onStart() {
         super.onStart();
         startScan();

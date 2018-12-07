@@ -5,12 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/QRCodeScanner.iml" filepath="$PROJECT_DIR$/QRCodeScanner.iml" />
       <module fileurl="file://$PROJECT_DIR$/QRCodeScanner.iml" filepath="$PROJECT_DIR$/QRCodeScanner.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/qrcodecore/qrcodecore.iml" filepath="$PROJECT_DIR$/qrcodecore/qrcodecore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qrcode1.iml" filepath="$PROJECT_DIR$/qrcode1.iml" />
       <module fileurl="file://$PROJECT_DIR$/qrcodecore/qrcodecore.iml" filepath="$PROJECT_DIR$/qrcodecore/qrcodecore.iml" />
       <module fileurl="file://$PROJECT_DIR$/scannercreterlib/scannercreterlib.iml" filepath="$PROJECT_DIR$/scannercreterlib/scannercreterlib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/scannercreterlib/scannercreterlib.iml" filepath="$PROJECT_DIR$/scannercreterlib/scannercreterlib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zbar/zbar.iml" filepath="$PROJECT_DIR$/zbar/zbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/zbar/zbar.iml" filepath="$PROJECT_DIR$/zbar/zbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/zxing/zxing.iml" filepath="$PROJECT_DIR$/zxing/zxing.iml" />
     </modules>
