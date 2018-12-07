@@ -7,19 +7,21 @@ android {
     compileSdkVersion config.compileSdkVersion
     buildToolsVersion config.buildToolsVersion
 
+    packagingOptions{
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }     
 
     defaultConfig {
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
         consumerProguardFiles 'consumer-proguard-rules.pro'
-        
-        packagingOptions{
-            doNotStrip '*/mips/*.so'
-        }
-        
+     
     }
 
-
+    ndk {
+        abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86' // <- only the supported ones
+    }
 
     /*def isBuildSo = true
     if (isBuildSo) { // 构建生成 so 文件
