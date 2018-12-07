@@ -16,12 +16,14 @@ android {
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
         consumerProguardFiles 'consumer-proguard-rules.pro'
+        
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86' // <- only the supported ones
+        }
      
     }
 
-    ndk {
-        abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86' // <- only the supported ones
-    }
+    
 
     /*def isBuildSo = true
     if (isBuildSo) { // 构建生成 so 文件
