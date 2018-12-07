@@ -12,6 +12,11 @@ android {
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
         consumerProguardFiles 'consumer-proguard-rules.pro'
+        
+        packagingOptions{
+            doNotStrip '*/mips/*.so'
+        }
+        
     }
 
 
