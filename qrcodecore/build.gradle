@@ -9,5 +9,14 @@ android {
     defaultConfig {
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
+        ndk {
+            //支持的CPU架构，如armeabi、x86、mips等
+            abiFilters "armeabi", "x86"
+        }
+    }
+
+    packagingOptions {
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
     }
 }
